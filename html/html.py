@@ -26,5 +26,6 @@ dict_avto = {'nof':f_avto,
              }
 
 rez = tm.render(dict_avto)
+
 with open(f_out, 'w') as f:
     f.write(rez)

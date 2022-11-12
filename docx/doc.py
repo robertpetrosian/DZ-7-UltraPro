@@ -16,9 +16,9 @@ lst_keys = lst_avto.pop(0) # list of columns
 lst_rows = list(map( lambda x: dict(zip(lst_keys, x)) , lst_avto)) # list of dict
 
 tm=docxtpl.DocxTemplate(f_tmpl)
-dict_avto = {'nof':f_avto,
-             'lst_rows':lst_rows ,
+dict_avto = {
+            'nof':f_avto,
+            'lst_rows':lst_rows ,
              }
-
 rez = tm.render(dict_avto)
 tm.save(f_out)

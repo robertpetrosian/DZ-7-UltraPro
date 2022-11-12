@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head> <meta charset="windows-1251">
+        <title> Автомобили из файла {{ nof }} </title>
+    </head>
+    <body>
+        <table border=1>
+            <caption> <h3>Автомобили и их характеристики</h3>  </caption>
+            <tr>
+            {% for item in lst_keys -%}
+                <th align="center" width="80">{{ item }}</th>
+            {% endfor -%}
+            </tr>
+            <tr>
+                {% for item in one_avto -%}
+                    <tr>
+                    {% for elem in item -%}
+                        <td align="center">{{ elem }}</td>
+                    {% endfor -%}
+                    </tr>
+                {% endfor -%}
+            </tr>
+        </table>
+    </body>
+</html>
